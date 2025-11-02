@@ -43,7 +43,7 @@ exports.create = async (req, res) => {
     });
 
     await user.save();
-    console.log("User saved with email:", email, "password hash:", user.password);
+    console.log("User saved with emaill:", email, "password hash:", user.password);
 
     const subject = 'Verify Your Email - OTP Code';
     const text = `Your OTP code is ${otp}. It will expire in 1 minute.`;
