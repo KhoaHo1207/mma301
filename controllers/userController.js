@@ -47,7 +47,7 @@ exports.create = async (req, res) => {
 
     const subject = 'Verify Your Email - OTP Code';
     const text = `Your OTP code is ${otp}. It will expire in 1 minute.`;
-    // await sendOTP(email, subject, text);
+    await sendOTP(email, subject, text);
     res.status(201).json({ message: 'User registered. Please verify your email with the OTP sent.' });
   } catch (error) {
     console.error('Registration error:', error);
